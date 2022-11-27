@@ -11,7 +11,7 @@ def usage():
     print()
     print("Commands:")
     print()
-    print("init [{basedir}]                 Initializes the database")
+    print("init {basedir} {host}               Initializes the database") 
     print("check {basedir} [{uid}]          Checks the database")
     print("purge {basedir} [{uid}]          Purges old data")
     print("adduser {basedir} [{uid}]        Adds a new user")
@@ -49,7 +49,7 @@ def main():
         import SNAC.utils
 
         if len(args) > 0:
-            ok = SNAC.utils.initdb(args.pop())
+            ok = SNAC.utils.initdb(args.pop(), args.pop())
         else:
             ok = SNAC.utils.initdb()
 
