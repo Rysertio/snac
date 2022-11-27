@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+
+import sys
+import SNAC.__main__
+
+sys.exit(SNAC.__main__.main())
