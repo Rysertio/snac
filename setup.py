@@ -15,6 +15,9 @@ setup(
     packages=["SNAC"],
     url="https://example.com",
     license="Public Domain",
+    install_requires=['urllib3',
+                      'pyOpenSSL',                     
+                      ],
     entry_points={
         "console_scripts": [
             "snac = SNAC.__main__:main"
