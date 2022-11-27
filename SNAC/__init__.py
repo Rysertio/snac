@@ -26,8 +26,8 @@ _user = {
 _server = {
     "host":                 "",
     "prefix":               "",
-    "address":              "127.0.0.1",
-    "port":                 8001,
+    "address":              "0.0.0.0",
+    "port":                 80,
     "layout":               SNAC.data.layout_version,
     "dbglevel":             0,
     "queue_retry_minutes":  2,
