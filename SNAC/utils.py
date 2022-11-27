@@ -51,6 +51,7 @@ def initdb(basedir, host):
     print("\nEnter the host name of the computer that will serve snac.")
     print("It must be a TLS-protected host (don't type the https://).\n")
 
+    server["host"] = host
     if server["host"] == "":
         print("\nERROR: host name cannot be empty.")
         return False
