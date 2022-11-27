@@ -7,7 +7,7 @@ import datetime
 import SNAC
 import SNAC.data
 
-def initdb(basedir=None, host):
+def initdb(basedir, host):
     """ initializes the database """
 
     server = SNAC._server
