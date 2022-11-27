@@ -7,7 +7,7 @@ import datetime
 import SNAC
 import SNAC.data
 
-def initdb(basedir=None):
+def initdb(basedir=None, host):
     """ initializes the database """
 
     server = SNAC._server
@@ -38,11 +38,10 @@ def initdb(basedir=None):
 
     print("\nEnter the network and port address this server will be listening to.\n")
 
-    s = input("Network address [%s]: " % server["address"])
+    s = ""
     if s != "":
         server["address"] = s
-
-    s = input("Network port [%d]: " % server["port"])
+    
     if s != "":
         server["port"] = int(s)
 
@@ -51,7 +50,6 @@ def initdb(basedir=None):
 
     print("\nEnter the host name of the computer that will serve snac.")
     print("It must be a TLS-protected host (don't type the https://).\n")
-    server["host"] = input("Host name: ")
 
     if server["host"] == "":
         print("\nERROR: host name cannot be empty.")
@@ -66,7 +64,6 @@ def initdb(basedir=None):
     print("\nDo yo want/need a prefix in your path? So that, for example,")
     print("the URLs be https://%s/some_prefix/%s or similar." % (server["host"], uid))
     print("Leave it empty if you don't want a prefix.\n")
-    server["prefix"] = input("Path prefix in URL: ")
 
     if server["prefix"] != "" and server["prefix"][0] != "/":
         server["prefix"] = "/" + server["prefix"]
