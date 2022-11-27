@@ -27,7 +27,7 @@ _server = {
     "host":                 "",
     "prefix":               "",
     "address":              "0.0.0.0",
-    "port":                 80,
+    "port":                 10000,
     "layout":               SNAC.data.layout_version,
     "dbglevel":             0,
     "queue_retry_minutes":  2,
